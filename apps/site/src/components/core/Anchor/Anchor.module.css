@@ -1,0 +1,7 @@
+.root {
+  @apply inline-block rounded-md outline-none hover:underline focus-visible:ring ring-indigo-300;
+}
+
+.root[data-state="open"] {
+  @apply underline;
+}

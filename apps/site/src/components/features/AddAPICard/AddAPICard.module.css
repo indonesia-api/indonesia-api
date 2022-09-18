@@ -1,0 +1,11 @@
+.root {
+  @apply relative block p-4 overflow-hidden transition-colors rounded-md shadow-none outline-none bg-neutral-50 hover:bg-indigo-100 text-neutral-900 hover:text-indigo-500 focus-visible:ring ring-indigo-300;
+}
+
+.root[data-state="open"] {
+  @apply text-indigo-500 bg-indigo-100;
+}
+
+.border {
+  @apply flex items-center justify-center w-full gap-2 border-2 border-indigo-500 border-dashed rounded-md h-28 lg:h-36;
+}

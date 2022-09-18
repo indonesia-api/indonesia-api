@@ -1,0 +1,15 @@
+.root {
+  @apply relative block p-4 overflow-hidden transition-colors rounded-md shadow-md bg-neutral-50 hover:bg-indigo-500 text-neutral-900 hover:text-neutral-50;
+}
+
+.stack {
+  @apply flex flex-col w-full gap-1 h-28 lg:h-36 lg:gap-2;
+}
+
+.name {
+  @apply text-2xl font-medium;
+}
+
+.description {
+  @apply text-base font-normal line-clamp-1 lg:line-clamp-2;
+}

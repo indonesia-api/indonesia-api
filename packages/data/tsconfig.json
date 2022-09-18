@@ -1,0 +1,5 @@
+{
+  "extends": "@indonesia-api/tsconfig/javascript-library.json",
+  "include": ["."],
+  "exclude": ["node_modules"]
+}

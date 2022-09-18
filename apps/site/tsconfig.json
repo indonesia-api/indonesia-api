@@ -1,0 +1,11 @@
+{
+  "extends": "@indonesia-api/tsconfig/nextjs.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "definitions.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

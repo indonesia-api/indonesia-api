@@ -1,0 +1,7 @@
+.root {
+  @apply inline-block p-1 rounded-md outline-none hover:text-neutral-50 hover:bg-indigo-500 focus-visible:ring ring-indigo-300;
+}
+
+.root[data-state="open"] {
+  @apply bg-indigo-500 text-neutral-50;
+}

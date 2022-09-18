@@ -1,0 +1,11 @@
+{
+  "name": "@indonesia-api/data",
+  "version": "0.0.0",
+  "description": "Indonesia API data",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "devDependencies": {
+    "@indonesia-api/tsconfig": "*",
+    "typescript": "^4.8.3"
+  }
+}

@@ -1,0 +1,15 @@
+.root {
+  @apply relative block p-6 overflow-hidden transition-colors rounded-md bg-neutral-50 text-neutral-900;
+}
+
+.stack {
+  @apply flex flex-col w-full gap-2 lg:gap-4;
+}
+
+.name {
+  @apply text-3xl font-medium;
+}
+
+.description {
+  @apply text-lg font-normal line-clamp-1 lg:line-clamp-2;
+}
