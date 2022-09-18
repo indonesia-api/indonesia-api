@@ -3,7 +3,7 @@ import jetpack from "fs-jetpack";
 import prettier from "prettier";
 
 import { APIs } from "@indonesia-api/data";
-import type { API } from "@indonesia-api/data";
+import type { LinkLabel, API } from "@indonesia-api/data";
 
 // CONSTANT
 
@@ -18,6 +18,20 @@ const LENGTH = {
   ">": TEMPLATE[">"].length,
   "<": TEMPLATE["<"].length,
 };
+
+const ICONS = {
+  ExternalLink: "![](./assets/svgs/external-link.svg)",
+  Github: "![](./assets/svgs/github.svg)",
+};
+function getLinkLabel(label: LinkLabel) {
+  switch (label) {
+    case "Github":
+      return ICONS.Github;
+
+    default:
+      return ICONS.ExternalLink;
+  }
+}
 
 // UTILITIES
 
@@ -69,7 +83,7 @@ async function start() {
           description,
           auth,
           cors,
-          links.map((link) => mdlink(link.label, link.url)).join(", ")
+          links.map((link) => mdlink(getLinkLabel(link.label), link.url)).join(", ")
         )
       )
     )
