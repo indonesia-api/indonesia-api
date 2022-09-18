@@ -32,7 +32,7 @@ function APIDetail(props: APIDetailProps) {
 
           <div className="flex items-center gap-2">
             {api.links.map((link, index) => (
-              <IconButtonLink key={index.toString()} href={link.url}>
+              <IconButtonLink key={index.toString()} href={link.url} target="_blank" rel="noopener noreferrer">
                 {getLinkIcon(link)}
               </IconButtonLink>
             ))}
