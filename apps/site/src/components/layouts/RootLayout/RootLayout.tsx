@@ -3,6 +3,8 @@ import type { PropsWithChildren } from "react";
 
 import { GitHub } from "react-feather";
 
+import { APP } from "~/const";
+
 import { IconButtonLink } from "~/components/core";
 import { AnchorContextMenu } from "~/components/features";
 
@@ -26,7 +28,7 @@ function RootLayout(props: RootLayoutProps) {
           <nav>
             <ul>
               <li>
-                <IconButtonLink href="/">
+                <IconButtonLink href={APP.link.github}>
                   <GitHub className="w-5 h-5" />
                 </IconButtonLink>
               </li>
