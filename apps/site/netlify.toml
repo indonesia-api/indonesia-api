@@ -1,6 +1,6 @@
 [build]
   command = "yarn run build"
-  publish = "apps/site/.next"
+  publish = ".next"
 
 
 [[plugins]]
