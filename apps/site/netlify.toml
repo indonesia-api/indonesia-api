@@ -1,0 +1,7 @@
+[build]
+  command = "yarn run build"
+  publish = "apps/site/dist"
+
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
