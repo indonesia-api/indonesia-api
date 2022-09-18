@@ -20,22 +20,32 @@ function APIDetail(props: APIDetailProps) {
   return (
     <div className={cx(style.root)}>
       <div className={style.stack}>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col items-start justify-between gap-4 md:flex-row">
           <span className={style.name}>{api.name}</span>
 
-          <div>
-            <div className="flex gap-1.5">
-              <div className="text-sm px-1.5 py-0.5 bg-indigo-500 text-neutral-50 rounded-md">auth | {api.auth.toLowerCase()}</div>
-              <div className="text-sm px-1.5 py-0.5 bg-indigo-500 text-neutral-50 rounded-md">cors | {api.cors.toLowerCase()}</div>
+          <div className="flex items-center gap-4 mt-0 mb-2 md:mt-3 md:mb-0 ">
+            <div>
+              <div className="flex gap-1.5">
+                <div className="text-sm px-1.5 lg:px-2 py-0.5 bg-indigo-500 text-neutral-50 rounded-md flex gap-1 lg:gap-2">
+                  <span>auth</span>
+                  <span>|</span>
+                  <span>{api.auth.toLowerCase()}</span>
+                </div>
+                <div className="text-sm px-1.5 lg:px-2 py-0.5 bg-indigo-500 text-neutral-50 rounded-md flex gap-1 lg:gap-2">
+                  <span>cors</span>
+                  <span>|</span>
+                  <span>{api.cors.toLowerCase()}</span>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div className="flex items-center gap-2">
-            {api.links.map((link, index) => (
-              <IconButtonLink key={index.toString()} href={link.url} target="_blank" rel="noopener noreferrer">
-                {getLinkIcon(link)}
-              </IconButtonLink>
-            ))}
+            <div className="flex items-center gap-2">
+              {api.links.map((link, index) => (
+                <IconButtonLink key={index.toString()} href={link.url} target="_blank" rel="noopener noreferrer">
+                  {getLinkIcon(link)}
+                </IconButtonLink>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -44,7 +54,8 @@ function APIDetail(props: APIDetailProps) {
         </div>
 
         <div>
-          <ul className="list-disc list-inside">
+          <div className="my-2">Features</div>
+          <ul className="ml-2 list-disc list-inside">
             {api.features.map((feature) => (
               <li key={feature}>{feature}</li>
             ))}

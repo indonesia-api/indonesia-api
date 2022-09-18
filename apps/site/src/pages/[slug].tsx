@@ -43,7 +43,7 @@ const APIDetailPage: NextPageWithLayout<Props> = (props) => {
     <>
       <Head title={{ prefix: api.name }} />
 
-      <div>
+      <div className="container max-w-4xl mx-auto">
         <APIDetail api={api} />
       </div>
     </>
