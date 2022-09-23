@@ -1,10 +1,10 @@
-![](./public/Cover.png)
+[![](./public/Cover.png)](https://indonesia-api.netlify.app)
 
 <p align="center">
   <a href="https://indonesia-api.netlify.app"><img src="./public/Badge.svg" /></a>
 </p>
 
-# indonesia-api
+# Indonesia API
 
 Indonesia API
 
