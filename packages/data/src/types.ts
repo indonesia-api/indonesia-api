@@ -8,6 +8,8 @@ type Link = {
   url: string;
 };
 
+type Status = "Active" | "Deprecated";
+
 type API = {
   name: string;
   slug: string;
@@ -17,6 +19,7 @@ type API = {
   auth: Auth;
   cors: CORS;
   links: Link[];
+  status: Status;
 
   _created: string /** Tanggal penambahan API pada repo */;
   _updated: string /** Tanggal pembaruan API pada repo */;

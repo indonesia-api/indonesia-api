@@ -27,6 +27,7 @@ const APIs: API[] = sortByName([
         url: "https://github.com/regions-of-indonesia",
       },
     ],
+    status: "Active",
     _created: "18-09-2022",
     _updated: "18-09-2022",
   },
