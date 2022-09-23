@@ -1,5 +1,9 @@
 ![](./public/Cover.png)
 
+<p align="center">
+  <a href="https://indonesia-api.netlify.app"><img src="./public/Badge.svg" /></a>
+</p>
+
 # indonesia-api
 
 Indonesia API
