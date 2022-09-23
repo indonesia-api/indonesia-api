@@ -12,6 +12,10 @@ Indonesia API
 
 <!-- <<<<<<<<<<<<<<<<<<<<<< INDONESIA API <<<<<<<<<<<<<<<<<<<<<< -->
 
+## Contributing
+
+See [Contributing](./CONTRIBUTING.md)
+
 ## LICENSE
 
 MIT
