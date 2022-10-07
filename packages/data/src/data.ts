@@ -128,6 +128,25 @@ const APIs: API[] = sortByName([
     _created: "07-10-2022",
     _updated: "07-10-2022",
   },
+  {
+    name: "Tokopedia Seller API Services",
+    slug: "tokopedia-seller-api-services",
+    description:
+      "Tokopedia Seller API Services allows you to integrate your system into Tokopedia. You can manage products, orders, and shops using all APIs that we provided in this document.",
+    features: ["Webhooks API", "Product API", "Order API", "Logistic API", "Shop API", "Finance API", "Interaction API", "Campaign API"],
+    categories: ["Marketplace"],
+    auth: ["OAuth"],
+    cors: "Unknown",
+    links: [
+      {
+        label: "Website",
+        url: "https://developer.tokopedia.com",
+      },
+    ],
+    status: "Active",
+    _created: "07-10-2022",
+    _updated: "07-10-2022",
+  },
 ]);
 
 export { AUTHs, CATEGORIEs, LINKLABELs, APIs };

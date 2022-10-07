@@ -1,4 +1,4 @@
-type Category = "Financial" | "Location" | "Other";
+type Category = "Financial" | "Location" | "Marketplace" | "Other";
 type Auth = "No" | "API Key" | "OAuth";
 type CORS = "Yes" | "No" | "Unknown";
 
