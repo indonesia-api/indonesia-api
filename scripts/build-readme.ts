@@ -1,6 +1,7 @@
 import path from "path";
 import jetpack from "fs-jetpack";
 import prettier from "prettier";
+import consola from "consola";
 
 import { APIs } from "@indonesia-api/data";
 import type { LinkLabel, API } from "@indonesia-api/data";
@@ -72,6 +73,16 @@ async function start() {
 
   const [before, , after] = getTemplateContent(current);
 
+  const slugs = APIs.map((api) => api.slug);
+
+  const duplicates = [...new Set(slugs.filter((slug) => slugs.indexOf(slug) !== slugs.lastIndexOf(slug)))];
+
+  if (duplicates.length > 0) {
+    consola.error(`Terdapat slug yang sama : ${duplicates.join(", ")}`);
+    consola.info("API slug harus unik");
+    return;
+  }
+
   const table = nljoin(
     mdcellwrapjoin("No", "Nama", "Dekripsi", "Auth", "CORS", "Links"),
     mdcellwrapjoin("-", "-", "-", "-", "-", "-"),
@@ -91,7 +102,8 @@ async function start() {
   const result = nljoin(before, table, after);
 
   await jetpack.writeAsync(TARGET, prettier.format(result, { parser: "markdown" }));
-  console.log(`${README} updated`);
+
+  consola.success(`${README} updated`);
 }
 
 start();
