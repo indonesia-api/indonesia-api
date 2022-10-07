@@ -4,7 +4,7 @@ import prettier from "prettier";
 import consola from "consola";
 
 import { APIs } from "@indonesia-api/data";
-import type { LinkLabel, API } from "@indonesia-api/data";
+import type { Auth, LinkLabel, Link, API } from "@indonesia-api/data";
 
 // CONSTANT
 
@@ -45,9 +45,36 @@ function nljoin(...array: string[]) {
 function mdlink(label: string, url: string) {
   return `[${label}](${new URL(url)})`;
 }
+function p(content: string) {
+  return `<p>${content}</p>`;
+}
+function ul(content: string) {
+  return `<ul>${content}</ul>`;
+}
+function li(content: string) {
+  return `<li>${content}</li>`;
+}
+function expandable(title: string, content: string, options: { open?: boolean } = {}) {
+  return `<details${options.open ? " open" : ""}><summary>${title}</summary>${content}</details>`;
+}
+function getNo(index: number) {
+  return `${index + 1}`;
+}
 function getName(name: string, links: API["links"]) {
   const selected = links.find((link) => link.label === "Website");
   return selected ? mdlink(name, selected.url) : links.length >= 1 ? mdlink(name, links[0].url) : name;
+}
+function getDescription(description: string, features: string[]) {
+  return [p(description), expandable("Fitur", ul(features.map((feature) => li(feature)).join("")))].join("");
+}
+function getAuth(auth: Auth[]) {
+  return auth.join(", ");
+}
+function getCORS(cors: string) {
+  return cors;
+}
+function getLinks(links: Link[]) {
+  return links.map((link) => mdlink(getLinkLabel(link.label), link.url)).join(" ");
 }
 function getTemplateContent(text: string) {
   const index = {
@@ -84,17 +111,17 @@ async function start() {
   }
 
   const table = nljoin(
-    mdcellwrapjoin("No", "Nama", "Dekripsi", "Auth", "CORS", "Links"),
+    mdcellwrapjoin("No", "Nama", "Deskripsi", "Auth", "CORS", "Links"),
     mdcellwrapjoin("-", "-", "-", "-", "-", "-"),
     nljoin(
-      ...APIs.map(({ name, description, auth, cors, links }, index) =>
+      ...APIs.map(({ name, description, features, auth, cors, links }, index) =>
         mdcellwrapjoin(
-          (index + 1).toString(),
+          getNo(index),
           getName(name, links),
-          description,
-          auth.join(", "),
-          cors,
-          links.map((link) => mdlink(getLinkLabel(link.label), link.url)).join(", ")
+          getDescription(description, features),
+          getAuth(auth),
+          getCORS(cors),
+          getLinks(links)
         )
       )
     )
