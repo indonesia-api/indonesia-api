@@ -29,9 +29,11 @@ Indonesia API
 
 <!-- <<<<<<<<<<<<<<<<<<<<<< INDONESIA API <<<<<<<<<<<<<<<<<<<<<< -->
 
-## Contributing
+## Contributors
 
-See [Contributing](./CONTRIBUTING.md)
+<img src="https://contrib.rocks/image?repo=indonesia-api/indonesia-api&max=136&columns=17" />
+
+[Become a contributor](./CONTRIBUTING.md)
 
 ## LICENSE
 
