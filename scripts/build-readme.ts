@@ -81,7 +81,7 @@ async function start() {
           (index + 1).toString(),
           getName(name, links),
           description,
-          auth,
+          auth.join(", "),
           cors,
           links.map((link) => mdlink(getLinkLabel(link.label), link.url)).join(", ")
         )
