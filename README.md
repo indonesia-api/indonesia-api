@@ -1,6 +1,15 @@
 [![](./public/Cover.png)](https://indonesia-api.netlify.app)
 
 <p align="center">
+  <a href="https://github.com/unej-io/app/network/members">
+    <img src="https://badgen.net/github/forks/unej-io/app?color=cyan" />
+  </a>
+  <a href="https://github.com/unej-io/app/stargazers">
+    <img src="https://badgen.net/github/stars/unej-io/app?color=yellow" />
+  </a>
+  <a href="https://github.com/unej-io/app/graphs/contributors">
+    <img src="https://badgen.net/github/contributors/unej-io/app?color=orange" />
+  </a>
   <a href="https://indonesia-api.netlify.app"><img src="./public/Badge.svg" /></a>
 </p>
 
