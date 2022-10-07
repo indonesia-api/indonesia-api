@@ -164,10 +164,8 @@ const IndexPage: NextPageWithLayout<Props> = (props) => {
 
       <section ref={apisSectionRef} className="p-4 xl:p-8 min-h-[24rem] lg:min-h-[32rem]">
         <div className="grid grid-cols-1 gap-4 my-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-4">
-          {apis.map((api, index) => (
-            <div key={index.toString()}>
-              <APICard api={api} />
-            </div>
+          {apis.map((api) => (
+            <APICard key={api.slug} api={api} />
           ))}
 
           <div>
