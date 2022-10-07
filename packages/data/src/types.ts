@@ -1,4 +1,4 @@
-type Category = "Location" | "Other";
+type Category = "Financial" | "Location" | "Other";
 type Auth = "No" | "API Key" | "OAuth";
 type CORS = "Yes" | "No" | "Unknown";
 
@@ -16,7 +16,7 @@ type API = {
   description: string;
   features: string[];
   categories: Category[];
-  auth: Auth;
+  auth: Auth[];
   cors: CORS;
   links: Link[];
   status: Status;
