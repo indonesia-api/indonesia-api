@@ -57,9 +57,6 @@ function li(content: string) {
 function expandable(title: string, content: string, options: { open?: boolean } = {}) {
   return `<details${options.open ? " open" : ""}><summary>${title}</summary>${content}</details>`;
 }
-function getNo(index: number) {
-  return `${index + 1}`;
-}
 function getName(name: string, links: API["links"]) {
   const selected = links.find((link) => link.label === "Website");
   return selected ? mdlink(name, selected.url) : links.length >= 1 ? mdlink(name, links[0].url) : name;
@@ -111,18 +108,11 @@ async function start() {
   }
 
   const table = nljoin(
-    mdcellwrapjoin("No", "Nama", "Deskripsi", "Auth", "CORS", "Links"),
-    mdcellwrapjoin("-", "-", "-", "-", "-", "-"),
+    mdcellwrapjoin("Nama", "Deskripsi", "Auth", "CORS", "Links"),
+    mdcellwrapjoin("-", "-", "-", "-", "-"),
     nljoin(
-      ...APIs.map(({ name, description, features, auth, cors, links }, index) =>
-        mdcellwrapjoin(
-          getNo(index),
-          getName(name, links),
-          getDescription(description, features),
-          getAuth(auth),
-          getCORS(cors),
-          getLinks(links)
-        )
+      ...APIs.map(({ name, description, features, auth, cors, links }) =>
+        mdcellwrapjoin(getName(name, links), getDescription(description, features), getAuth(auth), getCORS(cors), getLinks(links))
       )
     )
   );
