@@ -12,7 +12,7 @@ const APIs: API[] = sortByName([
   {
     name: "Regions of Indonesia",
     slug: "regions-of-indonesia",
-    description: "Regions of Indonesia",
+    description: "API Wilayah Indonesia",
     features: ["Dynamic API & Static API", "Search API", "Javascript client SDK"],
     categories: ["Location"],
     auth: ["No"],
@@ -29,13 +29,12 @@ const APIs: API[] = sortByName([
     ],
     status: "Active",
     _created: "18-09-2022",
-    _updated: "18-09-2022",
+    _updated: "08-10-2022",
   },
   {
     name: "BRI API",
     slug: "bri-api",
-    description:
-      "BRIAPI is Application Programming Interfaces (APIs) developed by BRI that enables your application to integrate with BRI banking services easily and quickly. BRIAPI is helping your company to streamline any financial activities for your customers.",
+    description: "Integrasi dengan layanan Bank BRI.",
     features: [
       "BRI Direct Debit",
       "BRIZZI",
@@ -60,13 +59,12 @@ const APIs: API[] = sortByName([
     ],
     status: "Active",
     _created: "07-10-2022",
-    _updated: "07-10-2022",
+    _updated: "08-10-2022",
   },
   {
     name: "API BCA",
     slug: "api-bca",
-    description:
-      "API BCA adalah layanan BCA untuk memberikan kemudahan dalam menjalankan berbagai instruksi transaksi keuangan, seperti pengecekan rekening tabungan, cek mutasi rekening, transfer, dan lain-lain, langsung dari paltform/aplikasi/website kamu.",
+    description: "Integrasi dengan layanan Bank BCA.",
     features: [
       "Informasi Rekening",
       "Kuasa Pendebetan Rekening",
@@ -94,13 +92,12 @@ const APIs: API[] = sortByName([
     ],
     status: "Active",
     _created: "07-10-2022",
-    _updated: "07-10-2022",
+    _updated: "08-10-2022",
   },
   {
     name: "BNI Digital Services",
     slug: "bni-digital-services",
-    description:
-      "BNI Digital Services Portal was developed as a tool that can be used by prospective partners BNI to get information about the digital payment solutions owned by BNI.",
+    description: "Integrasi dengan layanan Bank BNI.",
     features: [
       "One Gate Payment",
       "Remittance",
@@ -126,13 +123,12 @@ const APIs: API[] = sortByName([
     ],
     status: "Active",
     _created: "07-10-2022",
-    _updated: "07-10-2022",
+    _updated: "08-10-2022",
   },
   {
     name: "Tokopedia Seller API Services",
     slug: "tokopedia-seller-api-services",
-    description:
-      "Tokopedia Seller API Services allows you to integrate your system into Tokopedia. You can manage products, orders, and shops using all APIs that we provided in this document.",
+    description: "Integrasi seller dengan sistem Tokopedia.",
     features: ["Webhooks API", "Product API", "Order API", "Logistic API", "Shop API", "Finance API", "Interaction API", "Campaign API"],
     categories: ["Marketplace"],
     auth: ["OAuth"],
@@ -145,7 +141,7 @@ const APIs: API[] = sortByName([
     ],
     status: "Active",
     _created: "07-10-2022",
-    _updated: "07-10-2022",
+    _updated: "08-10-2022",
   },
 ]);
 
