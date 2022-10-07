@@ -27,14 +27,10 @@ function APIDetail(props: APIDetailProps) {
             <div>
               <div className="flex gap-1.5">
                 <div className="text-sm px-1.5 lg:px-2 py-0.5 bg-indigo-500 text-neutral-50 rounded-md flex gap-1 lg:gap-2">
-                  <span>auth</span>
-                  <span>|</span>
-                  <span>{api.auth.toLowerCase()}</span>
+                  <span className="font-bold">auth</span>|<span>{api.auth.map((v) => v.toLowerCase()).join(", ")}</span>
                 </div>
                 <div className="text-sm px-1.5 lg:px-2 py-0.5 bg-indigo-500 text-neutral-50 rounded-md flex gap-1 lg:gap-2">
-                  <span>cors</span>
-                  <span>|</span>
-                  <span>{api.cors.toLowerCase()}</span>
+                  <span className="font-bold">cors</span>|<span>{api.cors.toLowerCase()}</span>
                 </div>
               </div>
             </div>
